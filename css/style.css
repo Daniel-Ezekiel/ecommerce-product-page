@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -110vh;
+  height: 100vh;
+  width: 48vw;
+  padding: 3rem;
+  padding-top: 12rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  /* transition: all ease-in-out 0.5s; */
+}
+
+.nav-links.active {
+  left: 0;
+  /* transition: all ease-in-out 0.5s; */
+}
+
+.nav-links > li {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
