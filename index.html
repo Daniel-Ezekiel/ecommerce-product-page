@@ -51,7 +51,7 @@
 
     <main>
       <section class="grid gap-8">
-        <figure class="grid gap-8">
+        <figure class="relative grid gap-8">
           <img src="./images/image-product-1.jpg" alt="sneakers" />
 
           <figcaption class="hidden grid grid-cols-4 gap-3">
@@ -72,6 +72,17 @@
               alt="sneakers thumbnail"
             />
           </figcaption>
+
+          <button
+            class="absolute top-[50%] left-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full"
+          >
+            <img src="./images/icon-previous.svg" alt="previous button" />
+          </button>
+          <button
+            class="absolute top-[50%] right-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full"
+          >
+            <img src="./images/icon-next.svg" alt="next button" />
+          </button>
         </figure>
 
         <article class="grid gap-2 p-5">
