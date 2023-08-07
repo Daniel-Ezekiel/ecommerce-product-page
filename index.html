@@ -51,34 +51,44 @@
 
     <main>
       <section class="grid gap-8">
-        <figure class="relative grid gap-8">
-          <img src="./images/image-product-1.jpg" alt="sneakers" />
+        <figure class="mobile relative grid gap-8">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="sneakers"
+            class="mobile-product-image"
+          />
 
           <figcaption class="hidden grid grid-cols-4 gap-3">
             <img
               src="./images/image-product-1-thumbnail.jpg"
               alt="sneakers thumbnail"
+              data-num="1"
             />
             <img
               src="./images/image-product-2-thumbnail.jpg"
               alt="sneakers thumbnail"
+              data-num="2"
             />
             <img
               src="./images/image-product-3-thumbnail.jpg"
               alt="sneakers thumbnail"
+              data-num="3"
             />
             <img
               src="./images/image-product-4-thumbnail.jpg"
               alt="sneakers thumbnail"
+              data-num="4"
             />
           </figcaption>
 
           <button
+            id="btn-previous"
             class="absolute top-[50%] left-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full"
           >
             <img src="./images/icon-previous.svg" alt="previous button" />
           </button>
           <button
+            id="btn-next"
             class="absolute top-[50%] right-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full"
           >
             <img src="./images/icon-next.svg" alt="next button" />
