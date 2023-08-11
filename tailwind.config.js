@@ -41,13 +41,13 @@ module.exports = {
       "black-bg": "hsl(var(--black-bg) / 0.75)",
     },
 
-    // screens: {
-    //   sm: "640px",
-    //   md: "768px",
-    //   lg: "1024px",
-    //   xl: "1280px",
-    //   "2xl": "1440px",
-    // },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
+    },
   },
   plugins: [],
 };
