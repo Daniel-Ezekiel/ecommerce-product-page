@@ -53,3 +53,9 @@ allThumbnailsContainer.addEventListener("click", (e) => {
   }
   // console.log();
 });
+
+// Zoom-in on product image on desktop devices
+productImg.addEventListener("click", () => {
+  const isLargeScreen = window.innerWidth >= "768";
+  console.log(isLargeScreen);
+});

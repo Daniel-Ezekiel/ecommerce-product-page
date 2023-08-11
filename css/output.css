@@ -808,6 +808,18 @@ video {
   transition-duration: 500ms;
 }
 
+.duration-\[350\] {
+  transition-duration: 350;
+}
+
+.duration-\[350ms\] {
+  transition-duration: 350ms;
+}
+
+.duration-\[500ms\] {
+  transition-duration: 500ms;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -840,6 +852,16 @@ video {
 
 .hover\:text-orange:hover {
   color: hsl(var(--orange));
+}
+
+.hover\:transition-all:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:duration-\[500ms\]:hover {
+  transition-duration: 500ms;
 }
 
 @media (min-width: 640px) {
@@ -881,6 +903,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:cursor-zoom-in {
+    cursor: zoom-in;
+  }
+
   .md\:text-\[7rem\] {
     font-size: 7rem;
   }
