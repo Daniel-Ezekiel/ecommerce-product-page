@@ -21,11 +21,11 @@ const productImg = document.querySelector(".mobile-product-image");
 const btnPrevImage = document.querySelector("#btn-previous");
 const btnNextImage = document.querySelector("#btn-next");
 
-function displayProductImage() {
-  const imgSrc = `./images/image-product-${count}.jpg`;
+function displayProductImage(num = count) {
+  const imgSrc = `./images/image-product-${num}.jpg`;
   productImg.src = imgSrc;
 }
-displayProductImage(count);
+displayProductImage();
 
 btnPrevImage.addEventListener("click", (e) => {
   count--;
@@ -41,4 +41,15 @@ btnNextImage.addEventListener("click", (e) => {
     count = 1;
   }
   displayProductImage();
+});
+
+// Switching product images on thumbnail clicks
+const allThumbnailsContainer = document.querySelector("figcaption");
+
+allThumbnailsContainer.addEventListener("click", (e) => {
+  if (e.target.nodeName == "IMG") {
+    const num = e.target.dataset.num;
+    displayProductImage(num);
+  }
+  // console.log();
 });
