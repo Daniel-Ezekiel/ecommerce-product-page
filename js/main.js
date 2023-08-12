@@ -17,13 +17,16 @@ btnCloseMenu.addEventListener("click", () => {
 let count = 1;
 
 const mobileFigElement = document.querySelector("figure.mobile");
-const productImg = document.querySelector(".mobile-product-image");
+const desktopFigElement = document.querySelector("figure.desktop");
+const mobileProductImg = document.querySelector(".mobile-product-image");
+const desktopProductImg = document.querySelector(".desktop-product-image");
 const btnPrevImage = document.querySelector("#btn-previous");
 const btnNextImage = document.querySelector("#btn-next");
 
 function displayProductImage(num = count) {
   const imgSrc = `./images/image-product-${num}.jpg`;
-  productImg.src = imgSrc;
+  mobileProductImg.src = imgSrc;
+  desktopProductImg.src = imgSrc;
 }
 
 const showPrevImage = () => {
@@ -47,17 +50,30 @@ const showThumbnailImage = (target) => {
   displayProductImage(num);
 };
 
+// Image overlay zoom on larger screens
+const showImageOverlay = (target) => {
+  console.log(target);
+};
+
 mobileFigElement.addEventListener("click", (e) => {
   e.preventDefault();
   const target = e.target;
   // console.log(e.querySelector(".mobile-product-image"));
-  if (e.target.classList.contains("prev-btn")) showPrevImage();
-  if (e.target.classList.contains("next-btn")) showNextImage();
-  if (e.target.classList.contains("thumbnail")) showThumbnailImage(target);
+  if (target.classList.contains("prev-btn")) showPrevImage();
+  if (target.classList.contains("next-btn")) showNextImage();
+  if (target.classList.contains("thumbnail")) showThumbnailImage(target);
+  if (target.classList.contains("mobile-product-image"))
+    showImageOverlay(target);
 });
 // displayProductImage();
 
-// // Zoom-in on product image on desktop devices
-// productImg.addEventListener("click", () => {
-//   const isLargeScreen = window.innerWidth >= "960";
-// });
+desktopFigElement.addEventListener("click", (e) => {
+  e.preventDefault();
+  const target = e.target;
+  // console.log(e.querySelector(".mobile-product-image"));
+  if (target.classList.contains("prev-btn")) showPrevImage();
+  if (target.classList.contains("next-btn")) showNextImage();
+  if (target.classList.contains("thumbnail")) showThumbnailImage(target);
+  if (target.classList.contains("mobile-product-image"))
+    showImageOverlay(target);
+});

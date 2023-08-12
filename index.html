@@ -116,55 +116,63 @@
         </figure>
 
         <figure
-          class="overlay hidden relative grid gap-8 sm:p-[5rem] sm:gap-4 lg:p-1"
+          class="desktop hidden absolute w-[100vw] h-[100vh] py-[8rem] bg-black-bg lg:grid lg:gap-2 lg:gap-4"
         >
-          <img
-            src="./images/image-product-1.jpg"
-            alt="sneakers"
-            class="mobile-product-image sm:rounded-[2rem] md:cursor-zoom-in"
-          />
-
-          <figcaption class="hidden grid-cols-4 gap-3 sm:grid">
-            <img
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="sneakers thumbnail"
-              class="product-thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
-              data-num="1"
-            />
-            <img
-              src="./images/image-product-2-thumbnail.jpg"
-              alt="sneakers thumbnail"
-              class="product-thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
-              data-num="2"
-            />
-            <img
-              src="./images/image-product-3-thumbnail.jpg"
-              alt="sneakers thumbnail"
-              class="product-thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
-              data-num="3"
-            />
-            <img
-              src="./images/image-product-4-thumbnail.jpg"
-              alt="sneakers thumbnail"
-              class="product-thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
-              data-num="4"
-            />
-          </figcaption>
-
-          <button
-            id="btn-previous"
-            class="absolute top-[50%] left-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full sm:hidden"
-            type="button"
+          <div
+            class="relative figure-content w-[55rem] m-auto py-10 grid gap-2 gap-5"
           >
-            <img src="./images/icon-previous.svg" alt="previous button" />
-          </button>
-          <button
-            id="btn-next"
-            class="absolute top-[50%] right-3 translate-y-[-50%] flex justify-center items-center bg-white w-5 h-5 p-[0.8rem] rounded-full sm:hidden"
-            type="button"
-          >
-            <img src="./images/icon-next.svg" alt="next button" />
-          </button>
+            <span class="absolute right-3 font-bold text-[3rem] text-white"
+              >&times;</span
+            >
+
+            <img
+              src="./images/image-product-1.jpg"
+              alt="sneakers"
+              class="desktop-product-image block m-auto rounded-[1.5rem]"
+            />
+
+            <figcaption class="grid grid-cols-4 gap-5 px-5">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="sneakers thumbnail"
+                class="thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
+                data-num="1"
+              />
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="sneakers thumbnail"
+                class="thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
+                data-num="2"
+              />
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="sneakers thumbnail"
+                class="thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
+                data-num="3"
+              />
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="sneakers thumbnail"
+                class="thumbnail sm:rounded-[2rem] hover:scale-105 hover:transition-all hover:duration-[500ms] cursor-pointer"
+                data-num="4"
+              />
+            </figcaption>
+
+            <button
+              id="btn-previous"
+              class="next-btn absolute top-[50%] left-[-1.5rem] translate-y-[-50%] flex justify-center items-center bg-white w-7 h-7 p-[0.8rem] rounded-full"
+              type="button"
+            >
+              <img src="./images/icon-previous.svg" alt="previous button" />
+            </button>
+            <button
+              id="btn-next"
+              class="prev-btn absolute top-[50%] right-[-1.5rem] translate-y-[-50%] flex justify-center items-center bg-white w-7 h-7 p-[0.8rem] rounded-full"
+              type="button"
+            >
+              <img src="./images/icon-next.svg" alt="next button" />
+            </button>
+          </div>
         </figure>
 
         <article class="grid gap-2 p-5">
