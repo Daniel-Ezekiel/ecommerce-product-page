@@ -25,36 +25,39 @@ function displayProductImage(num = count) {
   const imgSrc = `./images/image-product-${num}.jpg`;
   productImg.src = imgSrc;
 }
-displayProductImage();
 
-btnPrevImage.addEventListener("click", (e) => {
+const showPrevImage = () => {
   count--;
   if (count < 1) {
     count = 4;
   }
   displayProductImage();
-});
+};
 
-btnNextImage.addEventListener("click", (e) => {
+const showNextImage = () => {
   count++;
   if (count > 4) {
     count = 1;
   }
   displayProductImage();
-});
+};
 
-// Switching product images on thumbnail clicks
-const allThumbnailsContainer = document.querySelector("figcaption");
+const showThumbnailImage = (target) => {
+  const num = target.dataset.num;
+  displayProductImage(num);
+};
 
-allThumbnailsContainer.addEventListener("click", (e) => {
-  if (e.target.nodeName == "IMG") {
-    const num = e.target.dataset.num;
-    displayProductImage(num);
-  }
-  // console.log();
+mobileFigElement.addEventListener("click", (e) => {
+  e.preventDefault();
+  const target = e.target;
+  // console.log(e.querySelector(".mobile-product-image"));
+  if (e.target.classList.contains("prev-btn")) showPrevImage();
+  if (e.target.classList.contains("next-btn")) showNextImage();
+  if (e.target.classList.contains("thumbnail")) showThumbnailImage(target);
 });
+// displayProductImage();
 
-// Zoom-in on product image on desktop devices
-productImg.addEventListener("click", () => {
-  const isLargeScreen = window.innerWidth >= "960";
-});
+// // Zoom-in on product image on desktop devices
+// productImg.addEventListener("click", () => {
+//   const isLargeScreen = window.innerWidth >= "960";
+// });
