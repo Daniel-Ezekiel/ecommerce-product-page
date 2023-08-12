@@ -56,6 +56,5 @@ allThumbnailsContainer.addEventListener("click", (e) => {
 
 // Zoom-in on product image on desktop devices
 productImg.addEventListener("click", () => {
-  const isLargeScreen = window.innerWidth >= "768";
-  console.log(isLargeScreen);
+  const isLargeScreen = window.innerWidth >= "960";
 });

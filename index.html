@@ -16,24 +16,36 @@
   </head>
 
   <body class="font-sans text-[1.6rem]">
-    <header class="relative border-b-[0.1rem] border-grayish-blue p-4">
-      <nav class="flex justify-center items-center gap-3">
-        <button class="cursor-pointer menu-open">
+    <header
+      class="relative border-b-[0.1rem] border-grayish-blue p-4 lg:max-w-[125rem] lg:m-auto"
+    >
+      <nav
+        class="flex justify-center items-center gap-3 lg:justify-start lg:gap-5"
+      >
+        <button class="cursor-pointer menu-open lg:hidden">
           <img src="./images/icon-menu.svg" alt="menu" />
         </button>
 
-        <a href="/" class="block mr-[auto] font-bold text-[3.5rem]">sneakers</a>
+        <a href="/" class="block mr-[auto] font-bold text-[3.5rem] lg:mr-[0]"
+          >sneakers</a
+        >
 
-        <ul class="nav-links relative transition-all duration-500">
-          <button class="absolute top-[4rem] left-[2rem] menu-close">
+        <ul
+          class="nav-links relative transition-all duration-500 lg:static lg:mr-[auto]"
+        >
+          <button class="absolute top-[4rem] left-[2rem] menu-close lg:hidden">
             <img src="./images/icon-close.svg" alt="close menu" class="w-4" />
           </button>
 
-          <li><a href="">Collections</a></li>
-          <li><a href="">Men</a></li>
-          <li><a href="">Women</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li>
+            <a href="" class="hover:underline hover:font-bold">Collections</a>
+          </li>
+          <li><a href="" class="hover:underline hover:font-bold">Men</a></li>
+          <li><a href="" class="hover:underline hover:font-bold">Women</a></li>
+          <li><a href="" class="hover:underline hover:font-bold">About</a></li>
+          <li>
+            <a href="" class="hover:underline hover:font-bold">Contact</a>
+          </li>
         </ul>
 
         <div class="flex justify-center items-center gap-3">
@@ -50,8 +62,10 @@
     </header>
 
     <main>
-      <section class="grid gap-8">
-        <figure class="mobile relative grid gap-8 sm:p-[5rem] sm:gap-4">
+      <section
+        class="grid gap-8 lg:max-w-[120rem] lg:m-auto lg:place-items-center lg:grid-cols-2 lg:gap-10 lg:p-[7rem]"
+      >
+        <figure class="mobile relative grid gap-8 sm:p-[5rem] sm:gap-4 lg:p-1">
           <img
             src="./images/image-product-1.jpg"
             alt="sneakers"
