@@ -20,6 +20,7 @@ const mobileFigElement = document.querySelector("figure.mobile");
 const desktopFigElement = document.querySelector("figure.desktop");
 const mobileProductImg = document.querySelector(".mobile-product-image");
 const desktopProductImg = document.querySelector(".desktop-product-image");
+const btnCloseOverlay = document.querySelector(".btn-close-overlay");
 const btnPrevImage = document.querySelector("#btn-previous");
 const btnNextImage = document.querySelector("#btn-next");
 
@@ -51,11 +52,13 @@ const showThumbnailImage = (target) => {
 };
 
 // Image overlay zoom on larger screens
-const showImageOverlay = (target) => {
+const toggleImageOverlay = (target) => {
   console.log(target);
+  desktopFigElement.classList.toggle("hidden");
 };
 
-mobileFigElement.addEventListener("click", (e) => {
+// All events functions on the product image for both mobile and desktop views
+const runImageOperation = (e) => {
   e.preventDefault();
   const target = e.target;
   // console.log(e.querySelector(".mobile-product-image"));
@@ -63,17 +66,9 @@ mobileFigElement.addEventListener("click", (e) => {
   if (target.classList.contains("next-btn")) showNextImage();
   if (target.classList.contains("thumbnail")) showThumbnailImage(target);
   if (target.classList.contains("mobile-product-image"))
-    showImageOverlay(target);
-});
-// displayProductImage();
+    toggleImageOverlay(target);
+  if (target.classList.contains("btn-close-overlay")) toggleImageOverlay();
+};
 
-desktopFigElement.addEventListener("click", (e) => {
-  e.preventDefault();
-  const target = e.target;
-  // console.log(e.querySelector(".mobile-product-image"));
-  if (target.classList.contains("prev-btn")) showPrevImage();
-  if (target.classList.contains("next-btn")) showNextImage();
-  if (target.classList.contains("thumbnail")) showThumbnailImage(target);
-  if (target.classList.contains("mobile-product-image"))
-    showImageOverlay(target);
-});
+mobileFigElement.addEventListener("click", runImageOperation);
+desktopFigElement.addEventListener("click", runImageOperation);
