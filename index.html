@@ -62,26 +62,30 @@
               Cart
             </h3>
             <div class="cart-content">
-              <!-- <div class="product flex gap-2 justify-start items-center">
+              <p class="hidden font-bold text-dark-grayish-blue text-center">
+                Your cart is empty
+              </p>
+
+              <div class="product hidden flex gap-2 justify-start items-center">
                 <img
-                  src="./images/image-product-1-thumbnail.jpg"
+                  src=""
                   alt="cart product thumbnail"
                   class="rounded-[1rem] h-[5rem]"
                 />
 
                 <div class="product-info mr-auto">
-                  <h4>Fall Limited Edition Sneakers</h4>
-                  <span class="price-count">$125 * 3</span>
-                  <span class="total font-bold">$375</span>
+                  <h4></h4>
+                  <span class="price-count"></span>
+                  <span class="price-total font-bold"></span>
                 </div>
 
                 <button class="btn-remove-product">
                   <img src="./images/icon-delete.svg" alt="delete" />
                 </button>
-              </div> -->
+              </div>
 
               <button
-                class="hidden bg-orange w-full mt-3 p-3 rounded-[1.5rem] font-bold text-white"
+                class="btn-checkout hidden bg-orange w-full mt-3 p-3 rounded-[1.5rem] font-bold text-white"
               >
                 Checkout
               </button>
@@ -99,9 +103,11 @@
 
     <main>
       <section
-        class="grid gap-8 lg:max-w-[120rem] lg:m-auto lg:place-items-center lg:grid-cols-2 lg:gap-10 lg:p-[7rem]"
+        class="product grid gap-8 lg:max-w-[120rem] lg:m-auto lg:place-items-center lg:grid-cols-2 lg:gap-10 lg:p-[7rem]"
       >
-        <figure class="mobile relative grid gap-8 sm:p-[5rem] sm:gap-4 lg:p-1">
+        <figure
+          class="product-img mobile relative grid gap-8 sm:p-[5rem] sm:gap-4 lg:p-1"
+        >
           <img
             src="./images/image-product-1.jpg"
             alt="sneakers"
@@ -213,7 +219,7 @@
           </div>
         </figure>
 
-        <article class="grid gap-2 p-5">
+        <article class="product-info grid gap-2 p-5">
           <span class="font-bold text-orange uppercase">Sneaker Company</span>
           <h1 class="font-bold text-[3.5rem] leading-[4.5rem]">
             Fall Limited Edition Sneakers
@@ -244,19 +250,23 @@
 
           <div class="grid gap-4 lg:grid-cols-[2fr_3fr]">
             <div
-              class="grid grid-cols-[1fr_2fr_1fr] items-center rounded-[1rem] p-3 bg-light-grayish-blue font-bold text-orange text-center text-[2.5rem]"
+              class="product-count-container grid grid-cols-[1fr_2fr_1fr] items-center rounded-[1rem] p-3 bg-light-grayish-blue font-bold text-orange text-center text-[2.5rem]"
             >
-              <button class="h-full font-bold hover:text-dark-grayish-blue">
+              <button
+                class="btn-minus h-full font-bold hover:text-dark-grayish-blue"
+              >
                 -
               </button>
-              <span class="text-black-bg text-[2rem]">0</span>
-              <button class="h-full font-bold hover:text-dark-grayish-blue">
+              <span class="count text-black-bg text-[2rem]">0</span>
+              <button
+                class="btn-plus h-full font-bold hover:text-dark-grayish-blue"
+              >
                 +
               </button>
             </div>
 
             <button
-              class="flex justify-center items-center gap-2 bg-orange rounded-[1rem] p-3 text-white font-bold hover:text-orange hover:bg-pale-orange"
+              class="btn-add-to-cart flex justify-center items-center gap-2 bg-orange rounded-[1rem] p-3 text-white font-bold hover:text-orange hover:bg-pale-orange"
             >
               <img src="./images/icon-cart.svg" alt="cart icon" />
               Add to cart
