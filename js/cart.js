@@ -9,6 +9,7 @@ const productCountContainer = document.querySelector(
 const btnIncreaseCount = document.querySelector(".btn-plus");
 const btnDecreaseCount = document.querySelector(".btn-minus");
 const btnAddToCart = document.querySelector(".btn-add-to-cart");
+const cartCount = btnCart.querySelector("span");
 
 class Cart {
   constructor(products = []) {
@@ -55,6 +56,9 @@ btnCart.addEventListener("click", generateCartContent);
 document.querySelector(".btn-remove-product").addEventListener("click", () => {
   userCart.products.pop();
   generateCartContent();
+
+  cartCount.textContent = userCart.count;
+  cartCount.classList.add("hidden");
 });
 
 productCountContainer.addEventListener("click", (e) => {
@@ -102,5 +106,7 @@ btnAddToCart.addEventListener("click", (e) => {
     userCart.products.push(productSneaker);
   }
 
-  console.log(userCart.products);
+  cartCount.textContent = productSneaker.count;
+  cartCount.classList.remove("hidden");
+  e.target.closest("article").querySelector(".count").textContent = 0;
 });
