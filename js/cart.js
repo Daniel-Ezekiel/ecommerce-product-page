@@ -57,50 +57,6 @@ document.querySelector(".btn-remove-product").addEventListener("click", () => {
   generateCartContent();
 });
 
-// function addToCart() {
-//   //   Create cart item for each cart product
-//   userCart.products.forEach((product) => {
-//     const productDiv = document.createElement("div");
-//     productDiv.classList.add(
-//       "product",
-//       "flex",
-//       "gap-2",
-//       "justify-start",
-//       "items-center"
-//     );
-
-//     const productImg = document.createElement("img");
-//     productImg.classList.add("rounded-[1rem]", "h-[5rem]");
-//     productImg.src = product.imgSrc;
-
-//     const productInfoDiv = document.createElement("div");
-//     productInfoDiv.classList.add("product-info", "mr-auto");
-//     // child elements of productInfoDiv
-//     const productName = document.createElement("h4");
-//     productName.textContent = product.name;
-//     const productCount = document.createElement("span");
-//     productCount.textContent = `$${product.price} * ${product.count}`;
-//     const productTotalPrice = document.createElement("span");
-//     productTotalPrice.classList.add("total", "font-bold");
-//     productTotalPrice.textContent = `$${product.price * product.count}`;
-//     productInfoDiv.appendChild(productName);
-//     productInfoDiv.appendChild(productCount);
-//     productInfoDiv.appendChild(productTotalPrice);
-
-//     const btnRemoveProduct = document.createElement("button");
-//     btnRemoveProduct.classList.add("btn-remove-product");
-//     const deleteImg = document.createElement("img");
-//     deleteImg.src = "./images/icon-delete.svg";
-//     btnRemoveProduct.appendChild(deleteImg);
-
-//     productDiv.appendChild(productImg);
-//     productDiv.appendChild(productInfoDiv);
-//     productDiv.appendChild(btnRemoveProduct);
-
-//     cartContent.appendChild(productDiv);
-//   });
-// }
-
 productCountContainer.addEventListener("click", (e) => {
   const currCountSpan = productCountContainer.querySelector(".count");
   let currCount = Number(currCountSpan.textContent.trim());
